@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+<script type="text/javascript" src="https://tiiny.host/ad-script.js"></script><script defer data-domain="coffee-lilas-65.tiiny.site" src="https://analytics.tiiny.site/js/plausible.js"></script></head>
+<body>
+    <div class="gradient-background"></div>
+    <div class="container">
+        <div class="welcome-message" id="welcomeMessage">
+            <h1>Welcome to Tic Tac Toe!</h1>
+            <button id="startBtn" onclick="showSidePicker()">Start Game</button>
+        </div>
+
+        <div class="side-picker" id="sidePicker" style="display: none;">
+            <h1>Pick Your Side</h1>
+            <div class="choices">
+                <div class="choice" onclick="pickSide('X')">
+                    <img src="X.png" alt="X">
+                    <span>First</span>
+                </div>
+                <div class="choice" onclick="pickSide('O')">
+                    <img src="O.png" alt="O">
+                    <span>Second</span>
+                </div>
+            </div>
+            <button id="continueBtn" onclick="startGame()" disabled>CONTINUE</button>
+        </div>
+
+        <div class="game-board" id="gameBoard" style="display: none;">
+            <div class="scoreboard">
+                <span id="playerScore">0</span>
+                <span class="player-label" id="playerLabel">Player</span>
+                <span id="computerScore">0</span>
+            </div>
+            <div class="board">
+                <div class="cell" onclick="makeMove(0)"></div>
+                <div class="cell" onclick="makeMove(1)"></div>
+                <div class="cell" onclick="makeMove(2)"></div>
+                <div class="cell" onclick="makeMove(3)"></div>
+                <div class="cell" onclick="makeMove(4)"></div>
+                <div class="cell" onclick="makeMove(5)"></div>
+                <div class="cell" onclick="makeMove(6)"></div>
+                <div class="cell" onclick="makeMove(7)"></div>
+                <div class="cell" onclick="makeMove(8)"></div>
+              <div id="winMessage" style="display:none;"></div>
+
+            </div>
+            <button id="resetBtn" onclick="resetGame()">RESET</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Designed and Developed by <a href="https://www.priyanshupatel.online/" target="_blank">Priyanshu Patel</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
